@@ -2,12 +2,12 @@
 #include "Arduino_LED_Matrix.h"
 #include "LEDArray.h"
 
-static const char VerNum = "V00.00.01"
+static const char* VerNum = "V00.00.01";
 
+LEDArray VersionNumber(VerNum);
 
 void setup() {
-  LEDArray(VerNum);
-  printNum();
+  VersionNumber.printNum();
 }
 
 void loop() {

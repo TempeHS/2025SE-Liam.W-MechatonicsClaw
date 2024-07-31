@@ -2,9 +2,9 @@
 #include "ArduinoGraphics.h"
 #include "Arduino_LED_Matrix.h"
 
+ArduinoLEDMatrix matrix;
 
-
-LEDArray::LEDArray(byte VerNum)
+LEDArray::LEDArray(const char* VerNum)
 {
   _VerNum = VerNum;
 }

@@ -4,16 +4,16 @@
 #include "ArduinoGraphics.h"
 #include "Arduino_LED_Matrix.h"
 
-ArduinoLEDMatrix matrix;
+
 
 class LEDArray
 
 {
 private:
-  byte _VerNum;
+  const char* _VerNum;
 public:
   LEDArray() {} // don't use
-  LEDArray(byte VerNum);
+  LEDArray(const char* VerNum);
   
   void printNum();
 };
