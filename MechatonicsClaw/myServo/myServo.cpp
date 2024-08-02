@@ -8,9 +8,14 @@ myServo::myServo(byte pin, byte state) {
 
 
 void myServo::init() {
-  pinMode(_pin, OUTPUT);
+  Servo.attach(_pin);
 }
-// void servo::init(byte defaultState) {...}
 
+void myServo::writevalue(byte value){
+  _value = value
+  Servo.write(_value); //write position (optional cause servo also has)
+} 
+
+// void servo::init(byte defaultState) {...}
 //void readstate(); // read position (optional cause servo also has)
-//void writevalue(); //write position (optional cause servo also has)
+

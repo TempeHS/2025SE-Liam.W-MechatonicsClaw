@@ -13,9 +13,11 @@ public:
   
   void init();
   void init(byte defaultState); // do later when you find out servo values
-
+  
+  void writevalue(byte value); //write position (optional cause servo also has)
+  
   void readstate(); // read position (optional cause servo also has)
-  void writevalue(); //write position (optional cause servo also has)
+  
 };
 
 #endif

@@ -1,4 +1,5 @@
 #include "myServo.h"
+#include <Servo.h>
 
 static unsigned int pin = 10;
 unsigned int state = 0;
@@ -7,12 +8,7 @@ myServo servo1(pin, state);
 
 void setup() {
   servo1.init();
-  if (state == 0) {
-    servo1.write(90);
-  }
-  else {
-    servo1.write(180);
-  }
+  servo1.writevalue(90);
 }
 
 void loop() {
