@@ -1,13 +1,13 @@
 #include "servo.h" 
 #include <Servo.h>
 
-servo::servo(byte pin, byte state) {
+myServo::myServo(byte pin, byte state) {
   _pin = pin;
   _state = state;
 }
 
 
-void servo::init() {
+void myServo::init() {
   pinMode(_pin, OUTPUT);
 }
 // void servo::init(byte defaultState) {...}
