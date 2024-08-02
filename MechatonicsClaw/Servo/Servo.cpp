@@ -1,4 +1,4 @@
-#include "Servo.h" 
+#include "servo.h" 
 #include <Servo.h>
 
 servo::servo(byte pin, byte state) {

@@ -1,4 +1,4 @@
-#include "Servo.h"
+#include "servo.h"
 
 static unsigned int pin = 10;
 unsigned int state = 0;
