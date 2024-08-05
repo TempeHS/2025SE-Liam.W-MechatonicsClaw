@@ -4,6 +4,7 @@
 static unsigned int pin = 10;
 unsigned int state = 0;
 
+
 myServo servo1(pin, state);
 
 void setup() {
@@ -12,5 +13,8 @@ void setup() {
 }
 
 void loop() {
-
+  servo1.writevalue(0);
+  delay(1000);
+  servo1.writevalue(180);
+  delay(1000);
 }
