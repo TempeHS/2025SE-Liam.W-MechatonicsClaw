@@ -9,12 +9,9 @@ myServo servo1(pin, state);
 
 void setup() {
   servo1.init();
-  servo1.writevalue(90);
+  servo1.writevalue(120);
 }
 
 void loop() {
-  servo1.writevalue(0);
-  delay(1000);
-  servo1.writevalue(180);
-  delay(1000);
+
 }

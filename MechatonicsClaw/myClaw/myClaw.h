@@ -9,7 +9,6 @@ class myClaw : public myServo
 private:
 
 public:
-  myClaw() {} //don't use
   myClaw();
   virtual void init();
   virtual void writevalue();
