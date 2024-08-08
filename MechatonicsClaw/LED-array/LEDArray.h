@@ -9,7 +9,7 @@
 class LEDArray
 
 {
-private:
+protected:
   const char* _VerNum;
 public:
   LEDArray() {} // don't use

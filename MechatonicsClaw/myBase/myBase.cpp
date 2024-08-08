@@ -9,14 +9,14 @@ myBase::myBase(byte pin, byte state) {
 }
 
 void myBase::basepos() {
-  baseservo.writevalue(90);
+  baseservo.writevalue(100);
 }
 void myBase::redpos() {
-  baseservo.writevalue(90);
+  baseservo.writevalue(100);
 }
 void myBase::bluepos() {
-  baseservo.writevalue(135);
+  baseservo.writevalue(150);
 }
 void myBase::greenpos() {
-  baseservo.writevalue(45);
+  baseservo.writevalue(50);
 }

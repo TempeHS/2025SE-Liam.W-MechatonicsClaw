@@ -11,5 +11,14 @@ void setup() {
 }
 
 void loop() {
-  
+  base1.basepos();
+  delay(1000);
+  base1.bluepos();
+  delay(1000);
+  base1.basepos();
+  delay(1000);
+  base1.greenpos();
+  delay(1000);
+  base1.redpos();
+  delay(1000);
 }
