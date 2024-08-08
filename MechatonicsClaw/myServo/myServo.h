@@ -4,7 +4,7 @@
 #include <Servo.h>
 class myServo
 {
-private:
+protected:
   byte _pin;
   byte _state; //might change data type
 public:

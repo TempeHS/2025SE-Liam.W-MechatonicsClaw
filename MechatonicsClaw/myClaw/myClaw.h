@@ -9,9 +9,7 @@ class myClaw : public myServo
 private:
 
 public:
-  myClaw();
-  virtual void init();
-  virtual void writevalue();
+  myClaw(byte pin, byte state);
   void open();
   void close();
   void blockclose();

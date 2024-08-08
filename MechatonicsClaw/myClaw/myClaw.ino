@@ -11,5 +11,9 @@ void setup() {
 }
 
 void loop() {
-  
+  claw1.open();
+  delay(1000);
+  claw1.close();
+  delay(1000);
+  claw1.open();
 }
