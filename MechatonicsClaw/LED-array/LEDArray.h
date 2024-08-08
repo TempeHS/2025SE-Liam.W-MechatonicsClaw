@@ -1,6 +1,6 @@
 #ifndef LEDArray_H
 #define LEDArray_H
-# include <Arduino.h>
+#include <Arduino.h>
 #include "ArduinoGraphics.h"
 #include "Arduino_LED_Matrix.h"
 
