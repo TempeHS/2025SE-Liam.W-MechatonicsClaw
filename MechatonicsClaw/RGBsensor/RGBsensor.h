@@ -6,14 +6,14 @@ class RGBsensor
 protected:
   byte _pin;
   byte _colour;
-  void readstate(); 
+  void RGBreadcolour(); 
 public: 
   RGBsensor() {} //don't use
   RGBsensor(byte pin);
-  
+  void printcolour();
 
   void RGBinit();
-  void RGBreadcolour();
+  
 };
 
 
