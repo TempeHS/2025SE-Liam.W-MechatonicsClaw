@@ -1,28 +1,46 @@
 #include "RGBsensor.h" 
 #include <Arduino.h>
 #include <Wire.h>
-#include <Adafruit_TCS34725.h>
+#include "Adafruit_TCS34725.h"
 
-//ArduinoTCS34725 sensor;
-//Adafruit_TCS34725 mySensor = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
+byte gammatable[256];
+Adafruit_TCS34725 varSensor = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
 
 RGBsensor::RGBsensor(byte pin) {
-  _pin = pin;
+  _pin=pin;
 }
 
-void RGBsensor::RGBinit() {}
-void RGBsensor::RGBreadcolour() {}
+void RGBsensor::RGBinit() {
+  Serial.begin(9600);
+  Serial.println("Color View Test!");
+
+  if (varSensor.begin()) {
+    Serial.println("Found sensor");
+  } else {
+    Serial.println("No TCS34725 found ... check your connections");
+    while (1);
+  }
+}
+
+void RGBsensor::RGBtocolour() {
+  for (int i=0; i<256; i++) {
+  float x = i;
+  x /= 255;
+  x = pow(x, 2.5);
+  x *= 255;
+  gammatable[i] = 255 - x;
+}
 
 void RGBsensor::printcolour() {
-//  float red, green, blue;
-//
-//  delay(60);  // takes 50ms to read
+  float red, green, blue;
 
-//  mySensor.getRGB(&red, &green, &blue);
+  delay(60);  // takes 50ms to read
 
- // Serial.print("R:\t"); Serial.print(int(red)); 
-//  Serial.print("\tG:\t"); Serial.print(int(green)); 
- // Serial.print("\tB:\t"); Serial.print(int(blue));
+  varSensor.getRGB(&red, &green, &blue);
 
- // Serial.print("\n");
-}
+  Serial.print("R:\t"); Serial.print(int(red)); 
+  Serial.print("\tG:\t"); Serial.print(int(green)); 
+  Serial.print("\tB:\t"); Serial.print(int(blue));
+
+  Serial.print("\n");
+};

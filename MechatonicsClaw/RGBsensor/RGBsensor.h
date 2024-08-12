@@ -1,6 +1,7 @@
 #ifndef RGBsensor_H
 #define RGBsensor_H
 #include <Arduino.h>
+
 class RGBsensor 
 {
 protected:
@@ -10,8 +11,9 @@ protected:
 public: 
   RGBsensor() {} //don't use
   RGBsensor(byte pin);
+  
   void printcolour();
-
+  void RGBtocolour();
   void RGBinit();
   
 };
