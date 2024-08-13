@@ -29,18 +29,24 @@ void RGBsensor::RGBtocolour() {
   x = pow(x, 2.5);
   x *= 255;
   gammatable[i] = 255 - x;
+  }
 }
 
 void RGBsensor::printcolour() {
   float red, green, blue;
-
   delay(60);  // takes 50ms to read
-
   varSensor.getRGB(&red, &green, &blue);
-
-  Serial.print("R:\t"); Serial.print(int(red)); 
-  Serial.print("\tG:\t"); Serial.print(int(green)); 
-  Serial.print("\tB:\t"); Serial.print(int(blue));
-
-  Serial.print("\n");
-};
+  if (int(red) >= 165) {
+    Serial.print("RED");
+  }
+  elif (int(green) >= 115) {
+    Serial.print("GREEN")
+  }
+  elif (int(blue) >= 125) {}
+  else {
+    Serial.print("R:\t"); Serial.print(int(red)); 
+    Serial.print("\tG:\t"); Serial.print(int(green)); 
+    Serial.print("\tB:\t"); Serial.print(int(blue));
+    Serial.print("\n");
+  }
+  }

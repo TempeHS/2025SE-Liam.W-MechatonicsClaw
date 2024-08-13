@@ -4,8 +4,6 @@
 #include "RGBsensor.h"
 
 
-byte gammatable[256];
-
 RGBsensor mySensor(2);
 
 void setup() {
