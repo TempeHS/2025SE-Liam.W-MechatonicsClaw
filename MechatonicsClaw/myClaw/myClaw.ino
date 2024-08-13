@@ -16,4 +16,7 @@ void loop() {
   claw1.close();
   delay(1000);
   claw1.open();
+  delay(1000);
+  claw1.blockclose();
+  delay(1000);
 }
