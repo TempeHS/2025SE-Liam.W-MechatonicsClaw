@@ -38,11 +38,16 @@ void RGBsensor::printcolour() {
   varSensor.getRGB(&red, &green, &blue);
   if (int(red) >= 165) {
     Serial.print("RED");
+    Serial.print("\n");
   }
-  elif (int(green) >= 115) {
-    Serial.print("GREEN")
+  else if (int(green) >= 115) {
+    Serial.print("GREEN");
+    Serial.print("\n");
   }
-  elif (int(blue) >= 125) {}
+  else if ( int(blue) >= 125) {
+    Serial.print("BLUE");
+    Serial.print("\n");
+  }
   else {
     Serial.print("R:\t"); Serial.print(int(red)); 
     Serial.print("\tG:\t"); Serial.print(int(green)); 
