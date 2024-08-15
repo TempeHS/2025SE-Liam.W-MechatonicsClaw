@@ -8,11 +8,19 @@
 #include "myServo.h"
 #include "myClaw.h"
 
-class MechArm : LEDArray : RGBsensor : myBase : myClaw : myServo {
-private:
 
+class MechArm {
+private:
+  LEDArray& LEDArray;
+  RGBsensor& RGBsensor;
+  myBase& myBase;
+  myClaw& myClaw;
+  myServo& myServoUpper;
+  myServo& myServoLower;
 public:
-  
+  MechArm () {} //don't use
+  MechArm (LEDArray& LEDArray, RGBsensor& RGBsensor, myBase& myBase, myClaw& myClaw, myServo& myServoUpper, myServo& myServoLower);
+  MechArm.init();
 }
 
 
