@@ -11,17 +11,20 @@
 
 class MechArm {
 private:
-  LEDArray& LEDArray;
-  RGBsensor& RGBsensor;
-  myBase& myBase;
-  myClaw& myClaw;
-  myServo& myServoUpper;
-  myServo& myServoLower;
+  LEDArray& ledarray;
+  RGBsensor& rgbsensor;
+  myBase& mybase;
+  myClaw& myclaw;
+  myServo& myservoupper;
+  myServo& myservolower;
 public:
-  MechArm () {} //don't use
-  MechArm (LEDArray& LEDArray, RGBsensor& RGBsensor, myBase& myBase, myClaw& myClaw, myServo& myServoUpper, myServo& myServoLower);
-  MechArm.init();
-}
+  MechArm (LEDArray& ledarray, RGBsensor& rgbsensor, myBase& mybase, myClaw& myclaw, myServo& myservoupper, myServo& myservolower);
+  void init();
+  void redSequence();
+  void blueSequence();
+  void greenSequence();
+  void baseStance();
+};
 
 
 #endif

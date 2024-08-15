@@ -10,7 +10,7 @@ protected:
   void RGBreadcolour(); 
 public: 
   RGBsensor() {} //don't use
-  RGBsensor(byte pin);
+  RGBsensor(byte pin); //not used
   
   void printcolour();
   void RGBtocolour();
