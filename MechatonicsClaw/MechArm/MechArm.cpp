@@ -16,3 +16,14 @@ void MechArm::init() {
   myservoupper.init();
   myservolower.init();
 }
+
+void MechArm::redSequence() {
+  myservoupper.writevalue(0);
+  delay(1000);
+  myservoupper.writevalue(90);
+  delay(1000);
+  myservolower.writevalue(0);
+  delay(1000);
+  myservoupper.writevalue(90);
+  delay(1000);
+}

@@ -10,14 +10,14 @@ static unsigned int basepin = 9;
 static unsigned int lowerpin = 10;
 static unsigned int upperpin = 11;
 static unsigned int clawpin = 6;
-//unused 
+//unused stuff
 static unsigned int basestate = 0;
 static unsigned int clawstate = 0;
 static unsigned int upperstate = 0;
 static unsigned int lowerstate = 0;
 //object setup
 LEDArray array(VerNum);
-RGBsensor rgbsensor();
+RGBsensor rgbsensor(1);
 myBase base(basepin, basestate);
 myClaw claw(clawpin, clawstate);
 myServo myservoupper(upperpin, upperstate);
@@ -26,7 +26,8 @@ MechArm arm(array, rgbsensor, base, claw, myservoupper, myservolower);
 
 
 void setup() {
-  arm.printNum();
+  arm.init();
+  arm.redSequence();
 }
 
 void loop() {

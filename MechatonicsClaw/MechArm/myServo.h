@@ -7,8 +7,10 @@ class myServo
 protected:
   byte _pin;
   byte _state; //might change data type
+  Servo myservo;
 public:
   myServo() {} // don't use
+  myServo(Servo &myservo);
   myServo(byte pin, byte state);
   
   void init();
