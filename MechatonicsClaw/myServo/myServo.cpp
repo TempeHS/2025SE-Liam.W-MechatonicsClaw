@@ -18,6 +18,12 @@ void myServo::writevalue(byte value){
   servo.write(value); //write position (optional cause servo also has)
 } 
 
-// void servo::init(byte defaultState) {...}
-//void readstate(); // read position (optional cause servo also has)
+void myServo::init(byte defaultState) 
+{
+  //Todo: init with defaultState
+}
+void readstate() 
+{
+  //Todo: readstate 
+}
 
