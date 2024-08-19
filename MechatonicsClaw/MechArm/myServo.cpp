@@ -1,7 +1,7 @@
 #include "myServo.h" 
 #include <Servo.h>
 
-myServo::myServo(Servo &myservo) {
+myServo::myServo(Servo& myservo) {
   myservo = myservo;
 }
 

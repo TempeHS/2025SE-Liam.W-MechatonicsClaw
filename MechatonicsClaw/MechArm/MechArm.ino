@@ -25,11 +25,17 @@ myServo myservolower(lowerpin, lowerstate);
 MechArm arm(array, rgbsensor, base, claw, myservoupper, myservolower);
 
 
+
 void setup() {
   arm.init();
-  arm.redSequence();
+  arm.baseStance();
+  delay(1000);
+  arm.basepickup();
 }
 
 void loop() {
-
+  
+  //test for RGB
+  rgbsensor.printcolour();
+  rgbsensor.RGBtocolour();
 }

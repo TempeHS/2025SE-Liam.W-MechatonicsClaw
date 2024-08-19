@@ -6,9 +6,11 @@
 
 class myClaw : public myServo
 {
-private:
-
+protected:
+  myServo claw;
 public:
+  myClaw() {} // do not use
+  myClaw(myServo& claw);
   myClaw(byte pin, byte state);
   void open();
   void close();

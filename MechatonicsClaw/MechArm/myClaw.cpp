@@ -1,7 +1,9 @@
 #include "myClaw.h"
 #include "myServo.h"
 
-myServo clawservo;
+myClaw::myClaw(myServo& claw) {
+  claw = claw;
+}
 
 myClaw::myClaw(byte pin, byte state) {
   _pin = pin;
@@ -9,11 +11,11 @@ myClaw::myClaw(byte pin, byte state) {
 }
 
 void myClaw::open() {
-  clawservo.writevalue(90);
+  claw.writevalue(90);
 }
 void myClaw::close() {
-  clawservo.writevalue(140);
+  claw.writevalue(140);
 }
 void myClaw::blockclose() {
-  clawservo.writevalue(120);
+  claw.writevalue(120);
 }

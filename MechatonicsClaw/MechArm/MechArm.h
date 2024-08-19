@@ -20,10 +20,12 @@ private:
 public:
   MechArm (LEDArray& ledarray, RGBsensor& rgbsensor, myBase& mybase, myClaw& myclaw, myServo& myservoupper, myServo& myservolower);
   void init();
+  void baseStance();
+  void basepickup();
   void redSequence();
   void blueSequence();
   void greenSequence();
-  void baseStance();
+  
 };
 
 

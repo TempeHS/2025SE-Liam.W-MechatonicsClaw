@@ -6,9 +6,10 @@
 
 class myBase : public myServo
 {
-private:
+protected:
 
 public:
+  myBase() {} //don't use
   myBase(byte pin, byte state);
   void basepos();
   void redpos();

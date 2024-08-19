@@ -10,7 +10,7 @@ protected:
   Servo myservo;
 public:
   myServo() {} // don't use
-  myServo(Servo &myservo);
+  myServo(Servo& myservo);
   myServo(byte pin, byte state);
   
   void init();
