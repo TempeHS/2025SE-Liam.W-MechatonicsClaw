@@ -32,9 +32,9 @@ void MechArm::basepickup() {
   myservolower.writevalue(170);
   myservoupper.writevalue(30);
   delay(1000);
-  myclaw.writevalue(120);
+  myclaw.open();
   delay(1000);
-  myclaw.writevalue(90);
+  myclaw.close();
 }
 void MechArm::redSequence() {
   myservoupper.writevalue(0);
@@ -49,4 +49,8 @@ void MechArm::redSequence() {
 
 void MechArm::blueSequence() {}
 void MechArm::greenSequence() {}
+
+void MechArm::test() {
+  myclaw.writevalue(140);
+}
 

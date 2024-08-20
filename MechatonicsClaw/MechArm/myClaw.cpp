@@ -2,7 +2,7 @@
 #include "myServo.h"
 
 myClaw::myClaw(myServo& claw) {
-  claw = claw;
+  this->claw = claw;
 }
 
 myClaw::myClaw(byte pin, byte state) {

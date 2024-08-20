@@ -28,9 +28,7 @@ MechArm arm(array, rgbsensor, base, claw, myservoupper, myservolower);
 
 void setup() {
   arm.init();
-  arm.baseStance();
-  delay(1000);
-  arm.basepickup();
+  arm.test();
 }
 
 void loop() {

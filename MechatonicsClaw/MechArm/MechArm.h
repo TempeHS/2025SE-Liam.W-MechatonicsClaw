@@ -25,6 +25,7 @@ public:
   void redSequence();
   void blueSequence();
   void greenSequence();
+  void test();
   
 };
 

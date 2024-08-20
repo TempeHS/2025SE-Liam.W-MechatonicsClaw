@@ -7,12 +7,9 @@ myClaw claw1(clawpin, clawstate);
 
 void setup() {
   claw1.init();
-
+  claw1.open();
 }
 
 void loop() {
-  claw1.open();
-  delay(1000);
-  claw1.close();
-  delay(1000);
+
 }

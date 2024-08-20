@@ -2,7 +2,7 @@
 #include <Servo.h>
 
 myServo::myServo(Servo& myservo) {
-  myservo = myservo;
+  this->myservo = myservo;
 }
 
 myServo::myServo(byte pin, byte state) {
