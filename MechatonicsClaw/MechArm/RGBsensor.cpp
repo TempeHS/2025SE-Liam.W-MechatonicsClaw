@@ -39,17 +39,17 @@ void RGBsensor::printcolour() {
   if (int(red) >= 165) {
     Serial.print("RED");
     Serial.print("\n");
-    const char* colour = "red";
+    return int colour = 0;
   }
   else if (int(green) >= 115) {
     Serial.print("GREEN");
     Serial.print("\n");
-    const char* colour = "green";
+    return int colour = 1;
   }
   else if ( int(blue) >= 125) {
     Serial.print("BLUE");
     Serial.print("\n");
-    const char* colour = "blue";
+    return int colour = 2;
   }
   else {
     Serial.print("R:\t"); Serial.print(int(red)); 

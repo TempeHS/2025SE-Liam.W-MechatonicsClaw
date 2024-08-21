@@ -34,22 +34,45 @@ void MechArm::basepickup() {
   myservoupper.writevalue(30);
   myclaw.writevalue(90);
   delay(1000);
-  delay(1000);
   myclaw.writevalue(120);
 }
 void MechArm::redSequence() {
-  myservoupper.writevalue(0);
-  delay(1000);
+  myservolower.writevalue(90);
   myservoupper.writevalue(90);
+  delay(500);
+  mybase.redpos();
   delay(1000);
   myservolower.writevalue(0);
   delay(1000);
-  myservoupper.writevalue(90);
+  myservoupper.writevalue(130);
   delay(1000);
+  myclaw.writevalue(90);
 }
 
-void MechArm::blueSequence() {}
-void MechArm::greenSequence() {}
+void MechArm::blueSequence() {
+  myservolower.writevalue(90);
+  myservoupper.writevalue(90);
+  delay(500);
+  mybase.bluepos();
+  delay(1000);
+  myservolower.writevalue(0);
+  delay(1000);
+  myservoupper.writevalue(130);
+  delay(1000);
+  myclaw.writevalue(90);
+}
+void MechArm::greenSequence() {
+  myservolower.writevalue(90);
+  myservoupper.writevalue(90);
+  delay(500);
+  mybase.greenpos();
+  delay(1000);
+  myservolower.writevalue(0);
+  delay(1000);
+  myservoupper.writevalue(130);
+  delay(1000);
+  myclaw.writevalue(90); 
+}
 
 void MechArm::test() {
   myclaw.writevalue(140);
