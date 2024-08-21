@@ -19,6 +19,7 @@ void MechArm::init() {
 
 void MechArm::baseStance() {
   myservolower.writevalue(140);
+  myclaw.writevalue(140);
   mybase.basepos();
   delay(1000);
   mybase.redpos();
@@ -31,10 +32,10 @@ void MechArm::baseStance() {
 void MechArm::basepickup() {
   myservolower.writevalue(170);
   myservoupper.writevalue(30);
+  myclaw.writevalue(90);
   delay(1000);
-  myclaw.open();
   delay(1000);
-  myclaw.close();
+  myclaw.writevalue(120);
 }
 void MechArm::redSequence() {
   myservoupper.writevalue(0);
