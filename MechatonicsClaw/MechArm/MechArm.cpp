@@ -30,9 +30,12 @@ void MechArm::baseStance() {
   delay(1000); //safety delay
 }
 void MechArm::basepickup() {
-  myservolower.writevalue(170);
-  myservoupper.writevalue(30);
+  myservolower.writevalue(160);
   myclaw.writevalue(90); //should be myclaw.open()
+  delay(1000);
+  myservolower.writevalue(170);
+  delay(1000);
+  myservoupper.writevalue(30);
   delay(1000);
   myclaw.writevalue(120); //should be myclaw.blockclose()
   delay(1000); //safety delay
