@@ -12,10 +12,6 @@ void setup() {
   mySensor.RGBtocolour();
 }
 
-
-
-
-
 void loop() {
   mySensor.printcolour();
 }

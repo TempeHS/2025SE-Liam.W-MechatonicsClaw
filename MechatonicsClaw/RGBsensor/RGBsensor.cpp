@@ -36,7 +36,7 @@ void RGBsensor::printcolour() {
   float red, green, blue;
   delay(60);  // takes 50ms to read
   varSensor.getRGB(&red, &green, &blue);
-  if (int(red) >= 165) {
+  if (int(red) >= 160) {
     Serial.print("RED");
     Serial.print("\n");
     const char* colour = "red";

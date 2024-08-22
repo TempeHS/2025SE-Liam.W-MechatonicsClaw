@@ -1,6 +1,6 @@
 #include "myBase.h"
 
-static unsigned int pin = 10;
+static unsigned int pin = 9;
 static unsigned int state = 0;
 
 myBase base1(pin, state);
