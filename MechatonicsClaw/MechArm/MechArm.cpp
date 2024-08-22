@@ -26,6 +26,8 @@ void MechArm::baseStance() {
   delay(1000);
   myservolower.writevalue(160);
   delay(1000);
+  myservolower.writevalue(170);
+  delay(1500);
   myservolower.writevalue(180);
   delay(1000); //safety delay
 }
