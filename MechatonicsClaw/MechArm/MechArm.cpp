@@ -19,59 +19,63 @@ void MechArm::init() {
 
 void MechArm::baseStance() {
   myservolower.writevalue(140);
-  myclaw.writevalue(140);
-  mybase.basepos();
+  myclaw.writevalue(140); //should be myclaw.close()
+  mybase.writevalue(100); //should be mybase.basepos()
   delay(1000);
-  mybase.redpos();
   myservoupper.writevalue(80);
   delay(1000);
   myservolower.writevalue(160);
   delay(1000);
   myservolower.writevalue(180);
+  delay(1000); //safety delay
 }
 void MechArm::basepickup() {
   myservolower.writevalue(170);
   myservoupper.writevalue(30);
-  myclaw.writevalue(90);
+  myclaw.writevalue(90); //should be myclaw.open()
   delay(1000);
-  myclaw.writevalue(120);
+  myclaw.writevalue(120); //should be myclaw.blockclose()
+  delay(1000); //safety delay
 }
 void MechArm::redSequence() {
   myservolower.writevalue(90);
   myservoupper.writevalue(90);
   delay(500);
-  mybase.redpos();
+  mybase.writevalue(100); //should be mybase.redpos()
   delay(1000);
   myservolower.writevalue(0);
   delay(1000);
   myservoupper.writevalue(130);
   delay(1000);
-  myclaw.writevalue(90);
+  myclaw.writevalue(90); //should be myclaw.open()
+  delay(1000); //safety delay
 }
 
 void MechArm::blueSequence() {
   myservolower.writevalue(90);
   myservoupper.writevalue(90);
   delay(500);
-  mybase.bluepos();
+  mybase.writevalue(150); //should be mybase.bluepos()
   delay(1000);
   myservolower.writevalue(0);
   delay(1000);
   myservoupper.writevalue(130);
   delay(1000);
-  myclaw.writevalue(90);
+  myclaw.writevalue(90); //should be myclaw.open()
+  delay(1000); //safety delay
 }
 void MechArm::greenSequence() {
   myservolower.writevalue(90);
   myservoupper.writevalue(90);
   delay(500);
-  mybase.greenpos();
+  mybase.writevalue(50); // should be mybase.greenpos()
   delay(1000);
   myservolower.writevalue(0);
   delay(1000);
   myservoupper.writevalue(130);
   delay(1000);
-  myclaw.writevalue(90); 
+  myclaw.writevalue(90); //should be myclaw.open()
+  delay(1000); //safety delay
 }
 
 void MechArm::test() {

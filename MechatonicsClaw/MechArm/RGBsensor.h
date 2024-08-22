@@ -12,7 +12,7 @@ public:
   RGBsensor() {} //don't use
   RGBsensor(byte pin); //not used
   
-  void printcolour();
+  int printcolour();
   void RGBtocolour();
   void RGBinit();
   

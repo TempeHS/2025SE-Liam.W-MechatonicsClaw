@@ -29,17 +29,26 @@ MechArm arm(array, rgbsensor, base, claw, myservoupper, myservolower);
 void setup() {
   arm.init();
   arm.baseStance();
-  delay(2000); 
-  if (colour == "red") {
-  arm.basepickup();
-  delay(1000);
-  arm.redSequence();
-  }
+  rgbsensor.RGBtocolour();
+  delay(2000);
 }
 
 void loop() {
-  
-  //test for RGB
-  rgbsensor.printcolour();
-  rgbsensor.RGBtocolour();
+  int colour = rgbsensor.printcolour();
+  if (colour == 0) { //red
+  arm.basepickup();
+  arm.redSequence();
+  arm.baseStance();
+  }
+  else if (colour == 1) { //green
+  arm.basepickup();
+  arm.greenSequence();
+  arm.baseStance();
+  }
+  else if (colour == 2) {//blue
+  arm.basepickup();
+  arm.blueSequence();
+  arm.baseStance();
+  }
+
 }

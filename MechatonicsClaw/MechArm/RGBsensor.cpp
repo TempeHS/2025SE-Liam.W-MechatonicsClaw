@@ -32,29 +32,30 @@ void RGBsensor::RGBtocolour() {
   }
 }
 
-void RGBsensor::printcolour() {
+int RGBsensor::printcolour() {
   float red, green, blue;
   delay(60);  // takes 50ms to read
   varSensor.getRGB(&red, &green, &blue);
   if (int(red) >= 165) {
     Serial.print("RED");
     Serial.print("\n");
-    return int colour = 0;
+    return 0;
   }
   else if (int(green) >= 115) {
     Serial.print("GREEN");
     Serial.print("\n");
-    return int colour = 1;
+    return 1;
   }
   else if ( int(blue) >= 125) {
     Serial.print("BLUE");
     Serial.print("\n");
-    return int colour = 2;
+    return 2;
   }
   else {
     Serial.print("R:\t"); Serial.print(int(red)); 
     Serial.print("\tG:\t"); Serial.print(int(green)); 
     Serial.print("\tB:\t"); Serial.print(int(blue));
     Serial.print("\n");
+    return 5;
   }
   }
