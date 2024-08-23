@@ -5,7 +5,7 @@
 #include "myServo.h"
 #include "myClaw.h"
 //variables
-static const char* VerNum = "V00.00.21";
+static const char* VerNum = "V01.01.02";
 static unsigned int basepin = 9;
 static unsigned int lowerpin = 10;
 static unsigned int upperpin = 11;
@@ -28,6 +28,7 @@ MechArm arm(array, rgbsensor, base, claw, myservoupper, myservolower);
 
 void setup() {
   arm.init();
+  array.printNum();
   arm.baseStance();
   rgbsensor.RGBtocolour();
   delay(2000);
